@@ -42,7 +42,7 @@ siwords = \lyricmode {
 % an- tes que que- de os- cu- ro en cie- ga nie- bla.
 % De- cía en sue- ño o en i- lu- sión per- di- do.
 
- Vol- ví, halléme solo y entre abrojos,
+ Vol- ví, ha- llé- me so- lo y en- tre-a bro- jos,
  y en vez de luz, cercado de tiniebla
  y en lágrimas ardientes convertido.
 }
@@ -101,7 +101,7 @@ aiiwords = \lyricmode {
 
 global = { \key e \minor \time 4/2 \tempo 4 = 88 }
 
-siMusic = \relative c'' {
+siMusic = \relative c' {
 % part 1
 % { dis4 dis d d~ d1 | cis4 cis c4 c~ c1 | }
 % { \time 6/2 | b4 b~ b1 a4 a~ a1 \time 4/2 | fis4 fis2.~ fis2\fermata r2 | }
@@ -110,12 +110,13 @@ siMusic = \relative c'' {
 % { R\breve | R | r2 e' dis}
 
 % part 3
- { gis4 gis b b~ b e fis2 | cis4 cis e e~ e fis gis2 \time 5/4 | }
- { cis,4 cis e dis cis | b b dis cis b \time 5/2 | }
- { a gis a b~ b gis fis1 \time 4/2 | }
- { gis4 a b b~ b e fis2 | cis4 dis e e~ e fis gis2 \time 5/4 | }
+ { fis4 fis a a~ a d e2 | b4 b d d~ d e fis2 \time 5/4 | }
+ { b,4 b cis d e | a, a b cis d \time 5/2 | }
+ { g, fis g a~ a fis e1 \time 4/2 | }
+ { f4 g aes aes aes bes c2 | f,4 ges aes aes~ aes des ees2 \time 5/4 | }
+ { cis4 cis dis e fis | b, b cis dis e | a, gis a gis}
 }
-siiMusic = \relative c'' {
+siiMusic = \relative c' {
 % part 1
 % { b4 b bis bis~ bis1 | a4 a ais ais~ ais1 | }
 % { a4 a~ a1 a4 a~ a1 | fis4 fis2.~ fis2\fermata r4 fis | }
@@ -126,7 +127,9 @@ siiMusic = \relative c'' {
 % { c e (fis) g a g8 a b4 (e,) | f2. e4 dis1 | }
 
 % part 3
- { gis4 gis gis gis~ gis b b2 | gis4 a b a~ a <cis a> <e b>2 }
+ { fis4 fis fis fis~ fis a a2 | fis4 fis b b~ b b d2 | }
+ { g,4 g a b cis | fis, fis g a b | g fis e fis~ fis fis e 1 |}
+ { f4 g aes aes~ aes bes aes2 | gis4 a b a~ a <cis a> <e b>2 }
 }
 aiMusic = \relative c' {
 % part 1
@@ -138,7 +141,9 @@ aiMusic = \relative c' {
 % { dis e~ e e8 dis e4 e e c | }
 
 % part 3
- { e4 e e e~ e gis fis2 | e4 fis gis fis~ fis e <gis e>2 }
+ { d4 d d d~ d fis e2 | d4 d fis fis~ fis fis a2 }
+ { g2 g2. | fis2 fis2. | d2 d2. d4 cis1 | }
+ { d4 ees f f~ f g f2 | d4 e fis fis~ fis e <gis e>2 }
 }
 aiiMusic = \relative c' {
 % part 1
@@ -149,7 +154,9 @@ aiiMusic = \relative c' {
 % { R\breve | r1 r2. b4 | b e~ e b8 b e4 e a, a | }
 
 % part 3
- { e4 e e e~ e e dis2 | cis4 cis cis c~ c c b2 | }
+ { d4 d d d~ d d cis2 | b4 b b b~ b b a2 | }
+ { <d g,>2 d2. | d2 d2. | b2 b2. b4 cis1 | }
+ { d4 d d des~ des des c2 | b4 b b b~ b b a2 | }
 }
 
 
