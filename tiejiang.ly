@@ -28,7 +28,8 @@
 iswords = \lyricmode {
  叮 噹！ 叮 噹！ 清 脆 的 打 鐵 聲， 激 動 夜 間 沉 默 的 空 氣。 小 門 裏 時 時 閃 出 紅 光， 愈 顯 得 外 間 黑 漆 漆 地。
  我 從 門 前 經 過， 看 見 門 裏 的 鐵 匠。 叮 噹！ 叮 噹！ 他 錘 子 一 下 一 上， 砧 上 的 鐵， 閃 著 血 也 似 的 光， 照 見 他 額 上 淋 淋 的 汗， 和 他 裸 著 的， 寬 闊 的 胸 膛。
- 叮 噹！ 叮 噹！ 叮 噹！ 激 動 夜 間 沉 默 的 空 氣。 叮 噹！ 閃 出 紅 光， 顯 得 外 間 黑 漆 漆 地。
+ 叮 噹！ 叮 噹！ 清 脆 的 打 鐵 聲， 激 動 夜 間 沉 默 的 空 氣。 小 門 裏 時 時 閃 出 紅 光， 愈 顯 得 外 間 黑 漆 漆 地。
+% 叮 噹！ 叮 噹！ 叮 噹！ 激 動 夜 間 沉 默 的 空 氣。 叮 噹！ 閃 出 紅 光， 顯 得 外 間 黑 漆 漆 地。
  我 從 門 前 經 過， 看 見 門 裏 的 鐵 匠。 叮 噹！ 叮 噹！ 他 錘 子 一 下 一 上， 砧 上 的 鐵， 閃 著 血 也 似 的 光， 照 見 他 額 上 淋 淋 的 汗， 和 他 裸 著 的， 寬 闊 的 胸 膛。
  我 走 得 遠 了， 還 隱 隱 的 聽 見 叮 噹！ 叮 噹！ 一 下 一 上!
  朋 友， 朋 友， 你 該 留 心 著 這 聲 音， 叮 噹！ 叮 噹！ 叮 噹！ 叮 噹！ 沉 沉 的 自 然 界 中， 叮 噹！ 叮 噹！ 他 錘 子 永 遠 激 蕩。
@@ -65,11 +66,20 @@ isMusic = \relative c'' {
  { a4 a8 b e,4 e8 e | fis d g a b2 | c4 c8 c b4 b8 (d) | e4 e8 e dis4 b | }
  { e d b g | a g8 (b) a4 fis | e2. r4 | }
 
-%{
  { R1 | R | R \key c \major | }
+%{
  { r2 e'4 c | a8 (c) g4 c g | e8 (g) d4 e g | a c8 c d (g) e4 | r2 d4 d8 (e) | c4 e,8 (a) gis (a) b (d~) | d4 b c a8 (c) | b4 g8 (b) a4 d,8 (a') | g2. r4 | R1 | }
  { e4 c8 e g e g4 | a8 g a c16 c b8 (g) e4 | a c g c, | d c8 (e) d4 c | d8 (c) d (g) e2 | }
- { e4 e8 a g4 e8 g | a g a c b4 (e,) | a a8 c b4 a8 (b) | c (b) c e d4 g, | e' d c g | a g e d8 (g) | c,2. r4 | R1 \time 3/4 R2. | R \key d \major | }
+%}
+ { e'4 c a8 (c) g4 | a c8 c e, g d4 | c d e g | a c8 c d (g) e4 | }
+ { d d8 (e) c4 e,8 g | a (g) a (c) b4 e, | }
+ { a b c a8 (c) | b4 g8 (b) a4 d,8 (a') | g2. r4 | R1 | }
+ { e4 c8 e g e g4 | a8 g a c16 c b8 (g) e4 | a c g c, | }
+ { d c8 (e) d4 c | d8 (c) d (g) e2 | }
+ { e4 e8 a g4 e8 g | a g a c b4 (e,) | a a8 c b4 a8 (b) | c (b) c e d4 g, | }
+ { e' d c g | a g e d8 (g) | c,2. r4 | }
+% { R1 \time 3/4 R2. | R \key d \major | }
+%{
 
  { \tempo 4 = 78 fis2 fis8 fis | a2 a4 | d,2 d8 d | d4 e fis | b2 d4 | a2 d,4 | e d e8 (a) | fis2. | }
  { fis2. | a | fis2 (b4) | a2. | b2 b4 | a fis d | e (d) e | fis2. | R \key d \minor \time 4/4 | }
@@ -80,15 +90,25 @@ isMusic = \relative c'' {
 %}
 }
 iisMusic = \relative c'' {
- { g4 b e, g | e8 c16 c d8 fis e2 | g4 b e, g | e8 c16 c d8 (fis) g2 | c,4 c8 (d) e4 e8 fis | g4 g fis8 (e) dis4 | }
- { e e e c8 c | b4 b8 b e2 | }
+ { g4 b e, g | e8 c16 c d8 fis e2 | g4 b e, g | e8 c16 c d8 (fis) g2 | }
+ { c,4 c8 (d) e4 e8 fis | g4 g fis8 (e) dis4 | e e e c8 c | b4 b8 b e2 | }
+ { e4 c8 d e e fis4 | g8 d g b16 g fis8 (g) fis4 | }
+ { g g g d | e4 d c d8 (e) | fis (e) d4 g2 | }
+ { fis4 dis8 dis e4 e8 e | d d e fis g2 | }
+ { a4 e8 e g4 g | g fis8 fis fis4 b | g g e g | c, d e4 dis | e2. r4 | }
+ { R1 | R | R \key c \major | }
 
- { e4 c8 d e e fis4 | g8 d g b16 g fis8 (g) fis4 | g g g d | e4 d c d8 (e) | fis (e) d4 g2 | fis4 dis8 dis e4 e8 e | d d e fis g2 | }
- { a4 e8 e g4 g | g fis8 fis fis4 b | g g e g | c, d e4 dis | e2. r4 | R1 | R | R \key c \major | }
-
+ { c'4 g f e4 | f e8 e c c b4 | c b c e | f a8 a b4 c | }
+ { b gis a4 e8 d | c4 e gis e | }
+ { a <gis e> <a e> <e c> | <g d> <g d> <fis d> <d c> | <d b>2. r4 | R1 | }
+ { e4 c8 c e c e4 | f8 e f a16 f e4 b | c f e c | d c d c | d8 (c) b4 c2 | }
+%{
  { e'4 c a8 (c) g4 | a c8 c e, g d4 | c d e e | f a8 c b4 c | d d8 (e) c4 e,8 g | a (g) a (c) b4 e, | a gis a e | g g fis d | d2. r4 | R1 | }
  { e4 c8 e e e e4 | f8 e f a16 a g4 e | c a' g c, | d c8 (e) d4 c | d8 (c) d (g) e2 | }
-% { c4 c8 e e4 e8 e | e b e e g4 (e) | a a8 a b4 a8 (gis) | a (b) c a b4 g | c b a e | f e e d | c2. r4 | R1 \time 3/4 R2. | R \key d \major | }
+%}
+ { e4 e8 c e4 e8 e | e b e a g4 (e) | a a8 e gis4 e8 (gis) | a (gis) a c g4 g | }
+ { c g a e | f e c b | c2. r4 | }
+% { R1 \time 3/4 R2. | R \key d \major | }
 
 %{
  { fis2 fis8 d | e2 e4 | d2 d8 d | d4 e fis | g2 b4 | a2 d,4 | e d e | fis2. | }
@@ -144,8 +164,9 @@ upperNotes = \relative c'' {
  { <b g f d> <e b g> <d b g f> <b g f d> | <g f d b> <f d b> <d b g> <g g,> \key c \major | }
  { <g e c>2 r | R1 | R | R | R | R | R | r2. <d c>4 | <g b,> <g' b,> <d g,> <b d,> | <g b, g f> <f' b,> <d g,> <g, g,> | }
  { <e c g>2 <e~ c>4 <e b> | <f c a>2 r | }
-
  { s1 | s | s | s | s | s | s | s | s | }
+
+%{
  { <c g e>4 <c' g e> <g e c> <e c g> | <c g e> <c' g e> <g e c> <e c g> \time 3/4 | <cis a e> <cis' a e> <a e cis> | <g e cis> <e cis g> a, \key d \major | }
  { <d a fis>4 <fis' d a> <a, fis d> | <a e cis> <e' cis a> <a, e cis> | <fis d b> <d' b fis> <b fis d> | <fis d a> <cis' a fis> <a fis cis> | }
  { <d, b g> <b' g d> <d, b g> | <d a fis> <a' fis d> <d, a fis> | <e b~ g~> <d~ b~ g> <d b a~> | <fis d a>2. | }
@@ -158,6 +179,7 @@ upperNotes = \relative c'' {
  { s | s | s | s | s | }
  { s | s | s | s | }
  { s | s | s | }
+ %}
 }
 lowerNotes = \relative c { \clef "bass"
  { <e, e,>4 g' e b | <c c,> <b b,> <e, e,> <e'' e,> | <e, e,> <d d,> <c c,> <b b,> | <a a,> <d d,> <g, g,> <g'' g,> | }
@@ -173,6 +195,7 @@ lowerNotes = \relative c { \clef "bass"
  { <a' a,>2 <e e,> | <a a,> <e e,> | <a a,> <e e,> | <a a,> <g g,> | <c c,>4 <g g,> <a a,> <e e,> |}
  { <f f,> <e e,> <f f,> <g g,> | }
  { <c, c,>1 | <bes bes,> \time 3/4 | <a a,>2. | <a a,> \key d \major | }
+%{
  { <d d,> | <cis cis,> | <b b,> | <fis fis,> | <g g,> | <fis fis,> | <e e,>4 <b' b,> <a a,> | <d d,>2. | }
  { <b' b,> | <fis fis,> | <b b,> | <fis fis,> | <g g,> | <fis fis,> | <e e,> | <fis fis,> | <a a,>2 <a, a,>4 \key d \minor \time 4/4 | }
 
@@ -181,6 +204,7 @@ lowerNotes = \relative c { \clef "bass"
  { <g g,> <c, c,> <f f,>2 | <c c,>4 <cis cis,> <d d,> <d d,> | <c c,> <c c,> <f f,>2 | <bes bes,>4 <g g,> <d d,> <c c,> | }
  { <bes bes,> <gis gis,> <a a,> <a' a,> | <bes bes,> <a a,> <f f,> <d d,> | <bes bes,> <a a,> <g g,> <a a,> | }
  { <bes bes,> <bes bes,> <a a,> <a a,> | <g g,> <g g,> <a a,> <a a,> | <d d,>1~ | <d d,>2 r \bar "|."}
+%}
 }
 
 \layout {
@@ -203,12 +227,13 @@ lowerNotes = \relative c { \clef "bass"
         \new Voice = "IIs" { \global \iisMusic }
       >>
       \new Lyrics \lyricsto "IIs" { \iiswords }
-
+%{
       \new Staff = "III" <<
         \set Staff.instrumentName = #"III"
         \new Voice = "Ia" { \global \aMusic }
       >>
       \new Lyrics \lyricsto "Ia" { \awords }
+%}
     >>  % end ChoirStaff
 
     \new PianoStaff <<
