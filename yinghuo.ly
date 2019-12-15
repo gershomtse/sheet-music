@@ -25,7 +25,7 @@
 }
 
 iswords = \lyricmode {
- 親 愛 的 是 甚 麼 吸 引 你 把 你 帶 進 這 充 滿 著 神 秘 的 森 林?
+ 親 愛 的， 是 甚 麼 吸 引 你 把 你 帶 進 這 充 滿 著 神 秘 的 森 林?
  在 這 沒 有 月 亮 的 晚 上， 你 不 要 在 這 逗 留， 讓 我 照 明 你 回 家 的 路
  把 天 空 的 星 星 帶 到 你 的 眼 前
  若 是 你 在 森 林 中 走 迷 了，不 要 驚 慌
@@ -38,7 +38,7 @@ iswords = \lyricmode {
 %  孩 子 是 你 嗎? 把
 }
 iiswords = \lyricmode {
- 在 這 沒 有 月 亮 晚 上
+ 在 這 沒 有 月 亮 晚 上， 你 不 要 在 這 逗 留， 讓 我 照 明 你 回 家 的 路
 }
 awords = \lyricmode {
 }
@@ -48,15 +48,15 @@ global = { \key des \major \time 4/4 }
 isMusic = \relative c' {
  { \tempo 4 = 108 }
  { r2 f8 ges aes4~ | aes2 ees'8 (des) c4~ | c des c f, | aes2 bes8 (c) des4~ | des bes aes ges | aes2 des,8 (ees) f4~ | f ges8 f ges4 aes | }
- { ees2 r4 ees | f2 f8 (ges) aes4~ | aes2 ees'8 (des) c4~ | c des c (f,) | aes2 bes8 c des4~ | des bes ges8 (aes) bes4~ | bes aes des,8 (ees) f4 | }
+ { ees2 r4 ees | f2 f8 (ges) aes4~ | aes2 ees'8 (des) c4~ | c des c (des) | aes2 bes8 c des4~ | des bes ges8 (aes) bes4~ | bes aes des,8 (ees) f4 | }
  { ges aes bes c | des2. c4 | des1 | }
  { r2 f,8 ges aes4~ | aes2 ees'8 (des) c4~ | c des c f, | aes2 bes8 c des4~ | des bes aes ges | aes2 des,8 (ees) f4~ | f ges8 (f) ges4 aes | }
  { ees2 e4 fis~ \key e \major | fis r gis8 a b4~ | b2 dis8 cis b4~ | b4 e dis gis, | b2 cis8 dis e4~ | e cis a8 b cis4~ | cis b e,8 (fis) gis4 | }
  { a gis a b | fis2. e4 | e1 | }
  { r2 cis'8 dis e4 | b2 gis8 a b4 | a2 fis4 cis' | gis e e8 fis gis4 | }
- { cis2 cis8 dis e4 | b2 gis8 fis e4 | fis1 | gis | }
- { r2 cis8 dis e4 | b2 gis8 a b4 | a2 fis4 cis' | gis e e8 fis gis4 | }
- { cis2 cis8 dis e4 | b2 gis8 fis e4 | dis2 (ees) | f1 }
+ { cis2 cis8 dis e4 | b2 gis8 fis e4 | fis1 | dis | }
+ { r2 cis'8 dis e4 | b2 fis8 gis a4 | gis2. fis4 | e cis cis8 dis e4 | }
+ { r2 cis'8 dis e4 | b2 gis8 fis e4 | dis2 (ees) | f1 }
  { \key ees \major | }
  { r2 g8 aes bes4~ | bes2 f'8 (ees) d4~ | d ees d g, | bes2 c8 d ees4~ | ees c bes aes | bes2 ees,8 (f) g4~ | g aes8 (g) aes4 bes | }
  { f2 r4 f | g2 g8 aes bes4~ | bes2 f'8 ees d4~ | d ees d g, | bes2 c8 d ees4~ | ees c aes8 bes c4~ | c bes ees,8 (f) g4 | }
@@ -64,7 +64,7 @@ isMusic = \relative c' {
 }
 iisMusic = \relative c' {
  { R1 | R | R | R | R | R | R | }
- { r2 r4 ees | des2 des8 (ees) f4 c (ees) aes2 (bes) aes4 (f) | des2 des8 ees f4 | ges2 ges8 f ees4 | f2 des8 (ees) des4 | ees f ges aes | }
+ { r2 r4 ees | des2 des8 (ees) f4 c (ees) aes2 (bes) aes2 | f f8 ees des4 | ges2 ges8 (f) ees4 | f2 des8 (ees) des4 | ees f ges aes | }
  { bes (aes~ aes) ges | f1 | }
 }
 aMusic = \relative c' {
@@ -73,6 +73,11 @@ aMusic = \relative c' {
 upperNotes = \relative c'' {
 }
 lowerNotes = \relative c { \clef "bass"
+ { des8 aes' des4~ des2 | c,8 aes' c4~ c2 | bes,1 | f | ges | f | ees | aes | des, | c' | bes | f | ges | f | ees | aes | }
+ { des, | des' | c | bes | f | ges | f | ees | aes \key e \major | e' | dis | cis | gis | a | gis | fis | b | e, | }
+ { a | gis' | fis | cis | a | gis' | fis | gis | a | a | gis | cis,2 b | a1 | gis | gisis8 dis' fisis gis~ <gis eis>2 | }
+ { bes,1 \key ees \major | }
+ { <ees, ees,>1 | d' | c | g | aes | g | f | bes | ees, | d' | }
 }
 
 \layout {
