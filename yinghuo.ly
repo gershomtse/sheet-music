@@ -44,7 +44,7 @@ awords = \lyricmode {
 global = { \key des \major \time 4/4 }
 
 isMusic = \relative c' {
- { \tempo 4 = 108 }
+ { \tempo 4 = 112 }
  { r2 f8 ges aes4~ | aes2 ees'8 (des) c4~ | c des c f, | aes2 bes8 (c) des4~ | }
  { des bes aes ges | aes2 des,8 (ees) f4~ | f ges8 f ges4 aes | ees2 r4 ees | }
  { f2 f8 ges aes4~ | aes2 ees'8 (des) c4~ | c des c f, | aes2 bes8 c des4~ | }
@@ -62,7 +62,7 @@ isMusic = \relative c' {
  { r2 g8 aes bes4~ | bes2 f'8 ees d4~ | d ees d g, | bes2 c8 (d) ees4~ | }
  { ees c bes aes | bes2 ees,8 (f g4~) | g aes8 g aes4 bes | f2 r4 f | }
  { g2 g8 (aes) bes4~ | bes2 f'8 (ees) d4~ | d ees d (g,) | bes2 c8 (d) ees4~ | }
- { ees c aes8 bes c4~ | c bes ees,8 (f) g4 | aes bes c d | ees2. d4 | ees1 | }
+ { ees c aes8 (bes) c4~ | c bes ees,8 (f) g4 | aes (bes) c d | ees2. d4 | ees1 | }
 }
 iisMusic = \relative c' {
  { R1 | R | R | R | R | R | R | }
@@ -102,14 +102,8 @@ lowerNotes = \relative c { \clef "bass"
         \new Voice = "IIs" { \global \iisMusic }
       >>
       \new Lyrics \lyricsto "IIs" { \iiswords }
-%{
-      \new Staff = "III" <<
-        \set Staff.instrumentName = #"III"
-        \new Voice = "Ia" { \global \aMusic }
-      >>
-      \new Lyrics \lyricsto "Ia" { \awords }
     >>  % end ChoirStaff
-%}
+
     \new PianoStaff <<
       \set PianoStaff.instrumentName = #"鋼琴"
       \new Staff = "upper" <<
