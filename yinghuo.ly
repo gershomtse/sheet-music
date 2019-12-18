@@ -26,9 +26,11 @@
 
 iswords = \lyricmode {
  親 愛 的， 是 甚 麼 吸 引 你 把 你 帶 進 這 充 滿 著 神 秘 的 森 林?
- 在 這 沒 有 月 亮 的 晚 上， 你 不 要 在 這 逗 留， 讓 我 照 明 你 回 家 的 路
+ 太 陽 已 回 家 天 空 遍 布 繁 星， 你 不 要 在 這 _ 逗 留， 讓 我 照 明 你 回 家 的 路
+ 小 寶 貝， 若 是 你 走 迷 了 路 _ _ 不 要 驚 慌 讓 我 照 明 你 的 路 O
+
  把 天 空 的 星 星 帶 到 你 的 眼 前
- 若 是 你 在 森 林 中 走 迷 了，不 要 驚 慌
+ ， 在 森 林 中  
  爸 爸 在 家 等 候 的 媽 媽 在 家 憂 心 的 焦 慮
 
  你 是 否 來 找 屬 於 你 的 快 樂？
@@ -38,7 +40,8 @@ iswords = \lyricmode {
 %  孩 子 是 你 嗎? 把
 }
 iiswords = \lyricmode {
- 在 這 沒 有 月 亮 晚 上， 你 不 要 在 這 逗 留， 讓 我 照 明 你 回 家 的 路
+ 太 陽 已 回 家 天 空 遍 布 繁 星， 你 不 要 在 這 _ 逗 留， 讓 我 照 明 你 回 家 的 路
+ 小 寶 貝，
 }
 awords = \lyricmode {
 }
@@ -48,10 +51,10 @@ global = { \key des \major \time 4/4 }
 isMusic = \relative c' {
  { \tempo 4 = 108 }
  { r2 f8 ges aes4~ | aes2 ees'8 (des) c4~ | c des c f, | aes2 bes8 (c) des4~ | des bes aes ges | aes2 des,8 (ees) f4~ | f ges8 f ges4 aes | }
- { ees2 r4 ees | f2 f8 (ges) aes4~ | aes2 ees'8 (des) c4~ | c des c (des) | aes2 bes8 c des4~ | des bes ges8 (aes) bes4~ | bes aes des,8 (ees) f4 | }
+ { ees2 r4 ees | f2 f8 ges aes4~ | aes2 ees'8 (des) c4~ | c des c f, | aes2 bes8 c des4~ | des bes ges8 aes bes4~ | bes aes des,8 (ees) f4 | }
  { ges aes bes c | des2. c4 | des1 | }
- { r2 f,8 ges aes4~ | aes2 ees'8 (des) c4~ | c des c f, | aes2 bes8 c des4~ | des bes aes ges | aes2 des,8 (ees) f4~ | f ges8 (f) ges4 aes | }
- { ees2 e4 fis~ \key e \major | fis r gis8 a b4~ | b2 dis8 cis b4~ | b4 e dis gis, | b2 cis8 dis e4~ | e cis a8 b cis4~ | cis b e,8 (fis) gis4 | }
+ { r2 f,8 ges aes4~ | aes2 ees'8 des c4~ | c des c f, | aes2 bes8 (c) des4~ | des bes aes ges | aes2 des,8 (ees) f4~ | f ges8 f ges4 aes | }
+ { ees2 e4 (fis~) \key e \major | fis r gis8 a b4~ | b2 dis8 cis b4~ | b4 e dis gis, | b2 cis8 dis e4~ | e cis a8 b cis4~ | cis b e,8 (fis) gis4 | }
  { a gis a b | fis2. e4 | e1 | }
  { r2 cis'8 dis e4 | b2 gis8 a b4 | a2 fis4 cis' | gis e e8 fis gis4 | }
  { cis2 cis8 dis e4 | b2 gis8 fis e4 | fis1 | dis | }
@@ -64,7 +67,7 @@ isMusic = \relative c' {
 }
 iisMusic = \relative c' {
  { R1 | R | R | R | R | R | R | }
- { r2 r4 ees | des2 des8 (ees) f4 c (ees) aes2 (bes) aes2 | f f8 ees des4 | ges2 ges8 (f) ees4 | f2 des8 (ees) des4 | ees f ges aes | }
+ { r2 r4 ees | des2 des8 ees f4 c (ees) aes2 bes aes4 f | f2 f8 ees des4 | ges2 ges8 f ees4~ | ees f des8 (ees) des4 | ees f ges aes | }
  { bes (aes~ aes) ges | f1 | }
 }
 aMusic = \relative c' {
