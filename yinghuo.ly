@@ -147,6 +147,6 @@ lowerNotes = \relative c { \clef "bass"
       >>
     >>
   >>
-% \midi {}
+ \midi {}
  \layout {}
 }
