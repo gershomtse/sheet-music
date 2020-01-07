@@ -1,5 +1,5 @@
 \version "2.18.2"
-#(set-global-staff-size 18.5)
+#(set-global-staff-size 18)
 
 \paper {
  top-system-spacing.basic-distance = #15
@@ -16,7 +16,7 @@
 %copyright = "版權屬謝基信所有 2020"
  tagline = "版權屬謝基信所有 2020"
  dedication = \markup { \column {
-%	\line \center-align { \small "給 。" }
+	\line \center-align { \small "給 。" }
 %	\line { \teeny " " }
  }}
 }
@@ -61,7 +61,7 @@ awords = \lyricmode {
  若 回 頭 還 可 看 見 火 花， 飛 射 在 漆 黑 的 地 上， 閃 著 血 也 似 的 紅 光， 激 動 夜 間 沉 默 的 空 氣。
 }
 
-global = { \key e \minor \time 4/4 \tempo 4 = 72 }
+global = { \key e \minor \time 4/4 \tempo 4 = 74 }
 
 isMusic = \relative c'' {
  { R1 | R | R | }
@@ -86,10 +86,10 @@ isMusic = \relative c'' {
  { e' d c g | a g e d8 (g) | c,2. r4 | }
  { R1 \time 3/4 R2. | R \key d \major | }
 
- { fis2 fis8 fis | a2 a4 | d,2 d8 d | d4 e fis | b2 d4 | a2 d,4 | e d e8 (a) | fis2. | }
+ { \tempo 4 = 78 fis2 fis8 fis | a2 a4 | d,2 d8 d | d4 e fis | b2 d4 | a2 d,4 | e d e8 (a) | fis2. | }
  { b2. | a | b2 (d4) | cis2. | b2 b4 | a fis d | e (d) e | fis2. | R \key d \minor \time 4/4 | }
 
- { R1 | d'4 a g8 (bes) a4 | R1 | d4 c a8 (c) f,4 | r f d' c | }
+ { \tempo 4 = 72 R1 | d'4 a g8 (bes) a4 | R1 | d4 c a8 (c) f,4 | r f d' c | }
  { c f c c, | a' d c a | g4 f8 (a) g4 f | g8 (f) g (c) a2 | e'4 bes8 (a) a4 d | c8 bes a c c2 | }
  { bes4 bes a a8 (c) | d4 d8 d cis4 (a) | d4 c a f | g f8 (a) g4 e | d4 e f g | a bes a e' | fis1~ | fis2 r \bar "|." }
 }
@@ -148,10 +148,10 @@ aMusic = \relative c' {
  { bes4 bes a a8 (c) | d4 d8 d cis4 (a) | d4 c a f | g f8 (a) g4 e | d4 e f g | a bes a (e') | fis2. r4 | }
 %}
 
- { s1 | s | s | s | s | s | s | s | s | s | s | s | s | s | s | s | R | R | R | R | R | R | R \key c \major | }
+% { s1 | s | s | s | s | s | s | s | s | s | s | s | s | s | s | s | R | R | R | R | R | R | R \key c \major | }
 
- { c'4 g f e4 | f e8 e c e b4 | c b c e | f a8 a g4 g | b gis a4 e8 d | c4 e e gis | a e e c | d d d c | b2. r4 | R1 | }
- { e4 c8 c c c b4 | c8 c c f16 c e4 e | f f e c | d c8 (e) d4 c | d8 (c) d4 c2 | R1 | R | }
+% { c'4 g f e4 | f e8 e c e b4 | c b c e | f a8 a g4 g | b gis a4 e8 d | c4 e e gis | a e e c | d d d c | b2. r4 | R1 | }
+% { e4 c8 c c c b4 | c8 c c f16 c e4 e | f f e c | d c8 (e) d4 c | d8 (c) d4 c2 | R1 | R | }
 % { e4 e8 a gis4 e | e8 (gis) a c g4 f | g g a e | f e c c8 (b) | c2. r4 | R1 \time 3/4 R2. | R \key d \major | }
 %{
  { d2 d8 d | cis2 cis4 | b2 b8 b | d4 d d | d2 g4 | fis2 d4 | d d cis | d2. | }
@@ -164,50 +164,62 @@ aMusic = \relative c' {
 }
 upperNotes = \relative c'' {
  { s1 | s | s | }
- { <g b,>4 <b e,> <g b,> <e g,> | <a e c> <fis d a> <e g,> <e' b g> | }
+ { <g e>8 a <b g>4 e,8 fis <g e>4 | <a e> <fis d a> <e b g>2 | }
+ { <g b,>8 a <b g e>4 <e, b>8 fis <g e c>4 | <a e c> <d, c a> <d b g>2 | }
+ { <e g,>4 <e c> <g~ c,> <g e c> | d8 c <b g>4 <d a fis> <b a> | }
+ { <e b g> <e c a> <g e b> <e c> | <e b g> <b a> <e b g>2 }
+ { <e c>4~ <e c> <g e> <fis d c> | <g d>~ <g d b> <fis d a>2 | <d b>4 <g~ e> <g d b>2 | }
+ { <a e>4 <g d> <e c> <b g> | <a~ g> <d a fis> <b g>2 | }
+ { <fis' a,>4~ <fis dis b a> <b, g>2 | <fis' a,>4 <d~ c> <g d b>2 | e4~ <e c a> e~ <e b g> | }
+ { <e a,> <fis~ e cis> <fis dis b> b, | <g'~ e c> <g d b> <e~ c a> <e b g > | <e c> <g d b> <e c a~> <dis b a> | }
 
- { s1 | s | s | s | s | s | s | s | s | s | s | s | s | s | s | s | s | }
+ { <b' g e>4 <e g,> <b e,> <g b,> | <b? g ees>4 <ees g,> <b? ees,?> <g b,?> | }
+ { <b g d> <d g,> <b f> <g d> | <f b,> <d g,> <b f~> <f g> \key c \major | }
+ { <e' c g>2 r | R1 | R | R | R | R | R | r2. <d c>4 | <g b,> <g' b,> <d g,> <b d,> | <g f d b> <f' b,> <d g,> g, | }
+ { <e c g>2 <e~ c>4 <e b> | <f c a>8 <e b> <f c>4 <e b g>2 | <c a>4~ <f c a> <c g>~ <e c g> | <d a f> c <d a> e | }
+ { <f~ d~ c a> <f d b g> <e c g>2 | <e c>4 e~ <g e b>2 | <a e c> <g e b> | <e c>4 a <b gis e>2 | }
+ { e,4 <a c,> g~ <g f d b> | <g~ e c> <g d b> <e~ c> <e b g> | <c a> <e~ b> <e c a> <d~ c>8 <d b> | }
 
- { <b g e>4 <e b g> <d b g> <b g e> | <b g dis>4 <e b g> <d b g> <b g dis> | }
- { <b g f d> <e b g> <d b g f> <b g f d> | <g f d b> <f d b> <d b g> <g g,> \key c \major | }
- { <g e c>2 r | R1 | R | R | R | R | R | r2. <d c>4 | <g b,> <g' b,> <d g,> <b d,> | <g b, g f> <f' b,> <d g,> <g, g,> | }
- { <e c g>2 <e~ c>4 <e b> | <f c a>2 r | }
- { s1 | s | s | s | s | s | s | s | s | }
- { <c g e>4 <c' g e> <g e c> <e c g> | <c g e> <c' g e> <g e c> <e c g> \time 3/4 | <cis a e> <cis' a e> <a e cis> | <g e cis> <e cis g> a, \key d \major | }
+ { <c g e>4 <c' e,> <g c,> <e g,> | <c e,> <c' e,> <g c,> <e g,> \time 3/4 | <cis e,> <cis' e,> <a cis,> | <g a,> <e g,> a,~ \key d \major | }
 
- { <d a fis>4 <fis' d a> <a, fis d> | <a e cis> <e' cis a> <a, e cis> | <fis d b> <d' b fis> <b fis d> | <fis d a> <cis' a fis> <a fis cis> | }
- { <d, b g> <b' g d> <d, b g> | <d a fis> <a' fis d> <d, a fis> | <e b~ g~> <d~ b~ g> <d b a~> | <fis d a>2. | }
+ { <d a fis>4 <d' fis,~> <a fis> | <e a,> <cis' e,~> <a e> | <fis d> <d' fis,> <b d,> | <fis d a> <cis' e,> <a fis d> | }
+ { <d, b g> <b' d,> <g b,> | <d a> <a' d,> <fis a,> | <e b~ g~> <d b g> <cis a~ g> | <d a fis> <a' d,~> <fis d> | }
+ { <fis d> b d | <cis a fis> a fis | <b d,> d fis | <e a,> <cis fis,> <a cis,> | <b g d>2 d,4~ | <a' fis d>2 d,4 | <g e b>2 <e b>4 | }
 
- { s2. | s | s | s | s | s | s | }
- { <fis ais,~>4 <gis ais,> <a a,> | <a~ cis, a> <a~ d, b> <a e cis> \key d \minor \time 4/4 | }
- { <a f d>1 | }
- { s1 | s | s | s | s | s | s | s | s | s | s | s | s | s | s | s | s | s | }
+ { <fis ais,~>4 <gis ais,> <a a,> | <a~ cis,> <a~ d, b> <a e cis> \key d \minor \time 4/4 | }
+ { <f d>8 <g e> <a f>4 d,8 e <f d>4 | <g d bes> <e c a> <d~ a~ g> <d a f> | <d' a f> <a f c> <f d bes> <c a> | }
+ { <g' d bes> c, <f c a>2 | bes,4 bes8 c d4 d8 e | f g <a c,>4 <g e>8 f <e c>4 | f <d' f,> <c f,> <a c,> | }
+ { <d, bes> c <e bes> c | d <e g,> <f a,>2 | c4 <e bes> <f a,>2 | <e g,>4 c <f a,>2 | d4 <e bes> <f a,>2 | }
+ { <g d bes>4 e <cis a> <a' a,> | f f c a | <g' bes,> <f a,> <e g,>8 bes <cis a>4 | <d bes> <e bes> <f a,> <g a,> | }
+ { <a a,> <bes bes,> <a a,> <cis a e> | <d a fis>1~ | <d a fis>2 r \bar "|." }
 }
 lowerNotes = \relative c { \clef "bass"
- { <b b,>1 | <b b,> | <b b,>2 <b b,>8 <a a,> <g g,> <fis fis,> | }
- { <e e,>4 g' e b | <a a,> <b b,> <e, e,> <e'' e,> | <e, e,> <d d,> <c c,> <b b,> | <c c,> <d d,> <g, g,> <g'' g,> | }
- { <c,, c,> <g' c,> <c c,> <c, c,> | <b b,> <g g,> <d' d,> <dis dis,> | <e e,> <c c,> <b b,> <a a,> | <b b,> <b b,> <e, e,> <e'' e,> | }
- { <g, c,> g c c, | b g d' <c' d,> | <g g,> <c c,> <b b,> <g g,> | <c c,> <b b,> <c c,> <b b,> | <c c,> <d, d,> <g, g,> <g' g,> | }
- { <d d,> <dis dis,> <e e,> <e, e,> | <d' d,> <c' d,> <b g> <g, g,> | <c c,> <a a,> <e' e,> <d d,> | <c c,> <ais ais,> <b b,> <b' b,> | }
- { <c c,> <b b,> <g g,> <e e,> | <c c,> <b b,> <a a,> <b b,> | }
+ { <b b,>1 | <b b,> | <b b,>2 b8 a g fis | }
+ { e4 g'8 fis e4 b8 g | c4 b e~ <e e,> | e~ e8 d c4~ c8 b | a4 d g,~ <g g,> | }
+ { <c c,> g' e c | b g8 b d4 dis | e c b a | b~ <b b,> e,~ <e e,> | }
+ { <g' c,> g c c, | b g d'~ <d d,> | <g g,> c, b g | c b a b | c d g,~ <g g,> | }
+ { <d' d,> b e~ <e e,> | d,~ <d' d,> g,~ <g g,> | c a e' d | c ais b b | }
+ { c b a b | c b c b | }
 
- { <e e,> <e' g,> <b e,> <e, e,> | <ees ees,> <e' g,> <b ees,> <ees, ees,> | <d d,>1 | <g, g,> \key c \major | }
- { <c c,>2 r | R1 | R | R | R | R | R | r2. d4 | }
- { <g, g,> <g'' g,> b, <g g,> | <g, g,> <f'' g,> b, g, | <c c,>2 <e e,>4 <c c,> | <f f,> <a a,> <e e,> <e, e,> | } 
- { <f' f,> <c' c,> <e, e,> <c' c,> | <d, d,> <e e,> <f f,> <e e,> | <f f,> <g g,> <c c,> <c, c,> | }
- { <a' a,>2 <e e,> | <a a,> <e e,> | <a a,> <e e,> | <a a,> <g g,> | <c c,>4 <g g,> <a a,> <e e,> |}
- { <f f,> <e e,> <f f,> <g g,> | }
- { <c, c,>1 | <bes bes,> \time 3/4 | <a a,>2. | <a a,> \key d \major | }
+ { <e e,> b' g e | <ees ees,> b'? g ees? | <d d,> b' g f | d2 <g, g,> \key c \major | }
 
- { <d d,> | <cis cis,> | <b b,> | <fis fis,> | <g g,> | <fis fis,> | <e e,>4 <b' b,> <a a,> | <d d,>2. | }
- { <b' b,> | <fis fis,> | <b b,> | <fis fis,> | <g g,> | <fis fis,> | <e e,> | <fis fis,> | <a a,>2 <a, a,>4 \key d \minor \time 4/4 | }
+ { c,2 r | R1 | R | R | R | R | R | r2. d'4 | <g, g,> d'' b g | <g, g,> d'' b g, | c,2 e'4 c | f,a' e~ <e e,> | } 
+ { f, c' e, c' | d e f e | d g, c~ <c c,> | }
+ { <e a,>2 <e e,>4 b | a c e g | <a a,>2 <e e,>4 b | <a a,> e' g~ <g g,> | }
+ { c, <g' g,> a, <e' e,> | <f f,> <e e,> <d d,> g, | }
+ { <c c,> g' e c | <bes bes,> g' e c \time 3/4 | <a a,> g' e | cis a~ <a a,> \key d \major | }
 
- { <d d,>1 | <g g,>4 <a a,> <d, d,>2 | <d' d,>4 <c c,> <bes bes,> <a a,> | <bes bes,> <c c,> <f, f,>2 | }
- { <bes, bes,>2. <bes' bes,>4 | <a a,> <f f,> <c c,> <c' c,> | <f, f,> <bes bes,> <a a,> <f f,> | <bes bes,> <a a,> <bes bes,> <a a,> | }
- { <g g,> <c, c,> <f f,>2 | <c c,>4 <cis cis,> <d d,> <d d,> | <c c,> <c c,> <f f,>2 | <bes bes,>4 <g g,> <d d,> <c c,> | }
- { <bes bes,> <gis gis,> <a a,> <a' a,> | <bes bes,> <a a,> <f f,> <d d,> | <bes bes,> <a a,> <g g,> <a a,> | }
- { <bes bes,> <bes bes,> <a a,> <a a,> | <g g,> <g g,> <a a,> <a a,> | <d d,>1~ | <d d,>2 r \bar "|."}
+ { <d d,> a' d | <cis, cis,> a' cis | <b, b,> fis' b | <fis, fis,> fis' a | <g, g,> d' g | <fis fis,> d fis | }
+ { <e e,> b <a a,> | <d d,> fis a | b, fis' b | fis, cis' fis | <b b,> fis b | <fis fis,> cis fis | }
+ { g, d' g | fis, d' fis | e, e' g | <fis fis,>2. | <a a,>2 <a, a,>4 \key d \minor \time 4/4 | }
+
+ { <d d,>4 a'8 g f4 d8 bes | g4 a d~ <d d,> | d8 e c d bes c a f | bes4 c f~ <f f,> | }
+ { bes, f' bes~ <bes bes,> | a f c~ <c c,> | <f f,> bes a f | bes, a g a | bes c f~ <f f,> | }
+ { c cis d~ <d d,> | c~ <c c,> f~ <f f,> | bes, g d' c | bes gis a a | }
+ { <bes' bes,> <a a,>8 <g g,> <f f,> <e e,> <d d,> c | bes4 a g a | bes bes a a | }
+ { <g' g,> <g g,> a,~ <a a,> | <d d,>1~ | <d d,>2 r \bar "|." }
 }
+
 
 \layout {
  \context{
